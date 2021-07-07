@@ -1,10 +1,6 @@
+import { strict as assert } from 'assert';
 import { capitalize } from '../src/capitalize.js';
 
-if (capitalize('hello') !== 'Hello') {
-	throw new Error('Функція працює неправильно!');
-}
-if (capitalize('') !== '') {
-	throw new Error('Функція працює неправильно!');
-}
-	console.log('Всі тести пройдено!');
-
+assert.equal(capitalize(''), '');
+assert.equal(capitalize('hello'), 'Hello');
+console.log('Всі тести пройдено');
